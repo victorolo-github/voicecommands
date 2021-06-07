@@ -38,9 +38,9 @@ public class Escucha extends ResultAdapter {
                 System.out.print(gst + " ");
             }
             System.out.println();
-            if (gst.equals("cmop")) {
+            if (gst.equals("Exit")) {
                 recognizer.deallocate();
-                args[0] = "Hasta la proxima Cmop!";
+                args[0] = "Hasta la proxima !!";
                 System.out.println(args[0]);
                 Lee.main(args);
                 System.exit(0);
@@ -90,6 +90,6 @@ public class Escucha extends ResultAdapter {
         } catch (IOException ex) {
             System.out.println("Server socket error: " + ex.getMessage());
         }
-        cliente.startClient();
+        cliente.startClient(args);
     }
 }
